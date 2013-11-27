@@ -1,0 +1,8 @@
+# Apache files: run in apache directory
+for i in `find | grep 'java$'`; do perl -pi -e 's/org.apache.commons/com.sop4j.base.apache/g' $i; echo $i; done
+
+# Google files: run in google directory
+for i in `find | grep 'java$'`; do perl -pi -e 's/com.google/com.sop4j.base.google/g' $i; echo $i; done
+
+# Joda files: run in joda directory
+for i in `find | grep 'java$'`; do perl -pi -e 's/org.joda/com.sop4j.base.joda/g' $i; echo $i; done
